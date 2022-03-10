@@ -65,6 +65,14 @@ var includeLetter = function (n) {
       for (var i = 0; i < n; i++) {
         results += randomCharacters.charAt(Math.floor(Math.random() * randomCharacters.length));
       } 
+    } // catch all rule 
+      else {
+        alert("Please ensure to select Letters, Numbers or Special Characters to build your password");
+        var results = "";
+        var letters = "";
+        var numbers = "";
+        var specialCharacters = "";
+        numberCharacters();
     }
     return results;
   // return letter;
