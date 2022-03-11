@@ -1,5 +1,5 @@
 // requesting the number of characters to the end-user
-var numberCharacters = function () {
+function numberCharacters() {
   var number = window.prompt(
     "How many characters would you want your password to be?\n"
     + "Password length (8-128)"
@@ -10,7 +10,7 @@ var numberCharacters = function () {
       "Canceled by a mistake? No worries, hit the button again.\n" 
       + "Bye for now!"
     )
-    throw new Error("User cancelled the prompt");
+    return null;
   }
   // enforces user to select a minimum of 8 characters
   if (number < 8 || number > 128) {
@@ -25,7 +25,7 @@ var numberCharacters = function () {
   }
 }
 
-var selectCharacters = function() {
+function selectCharacters() {
   var randomCharacters = "";
   // prompting user which characters type they want
   var upperCase = window.confirm(
@@ -64,7 +64,7 @@ var selectCharacters = function() {
 }
 
 // function to build the password based on the length and characters type chosen 
-var generatePassword = function (pwdSize, chars) {
+function generatePassword(pwdSize, chars) {
   var results = "";
   for (var i = 0; i < pwdSize; i++) {
       results += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -72,17 +72,18 @@ var generatePassword = function (pwdSize, chars) {
     return results;
 }
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
 // Write password to the #password input
 function writePassword() {
   var pwdSize = numberCharacters();
+  if (!pwdSize) return;
   var chars = selectCharacters();
   var password = generatePassword(pwdSize, chars);
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
+
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
