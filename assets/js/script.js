@@ -25,7 +25,7 @@ function numberCharacters() {
   }
 }
 
-function selectCharacters() {
+function selectCharacters(pwdSize) {
   var randomCharacters = "";
   // prompting user which characters type they want
   var upperCase = window.confirm(
@@ -58,7 +58,20 @@ function selectCharacters() {
   }
   if (specialCharacters === true) {
     randomCharacters += "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  } 
+  if (upperCase === false && lowerCase === false && numbers === false && specialCharacters === false) {
+    alert("At least one group type should be selected!")
+    return selectCharacters(pwdSize);
   }
+  // Presents a pop-up confirming the user selection and password length
+  alert(
+    "Your password length is " + pwdSize + ".\n" 
+    + "It will be generated based on your selection, which is shown as TRUE below.\n\n"
+    + "Upper Case - " + upperCase + '\n'
+    + "Lower Case - " + lowerCase + '\n'
+    + "Numbers - " + numbers + '\n'
+    + "Special Characters - " + specialCharacters + '\n'
+  );
   // Return all possible selections as a single string 
   return randomCharacters;
 }
@@ -76,7 +89,7 @@ function generatePassword(pwdSize, chars) {
 function writePassword() {
   var pwdSize = numberCharacters();
   if (!pwdSize) return;
-  var chars = selectCharacters();
+  var chars = selectCharacters(pwdSize);
   var password = generatePassword(pwdSize, chars);
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
