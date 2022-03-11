@@ -2,21 +2,52 @@
 
 // requesting the number of characters to the end-user
 var numberCharacters = function () {
-  var number = window.prompt("How many characters would you want your password to be?");
-  number = parseInt(number);
-  // console.log(number);
-  return number;
+  var number = window.prompt(
+    "How many characters would you want your password to be?\n"
+    + "Password length (8-128)"
+  );
+  if (number === null) {
+    return;
+  }
+  if (number < 8 || number > 128) {
+    number = parseInt(number);
+    alert(
+      "Your password should have a minimum of 8 and not more than 128 characters.\n"
+      + "Reminder: Password length (8-128)"
+    );
+    return numberCharacters();
+  } else {
+    return number;
+  }
 }
 
 var selectCharacters = function() {
   var randomCharacters = "";
-  // prompt usuário para escolher os chars
-  var letters = window.confirm("Do you want to include upper case and lower case letters?");
-  var numbers = window.confirm("Do you want to include numbers?");
-  var specialCharacters = window.confirm("Do you want to include special characters?");
-  // criar um string gigante com os chars a serem usados
-  if (letters === true) {
-    randomCharacters += "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  // prompting user which characters type they want
+  var upperCase = window.confirm(
+    "Do you want to include upper case letters?\n"
+    + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  );
+  var lowerCase = window.confirm(
+    "Do you want to include lower case letters?\n"
+    + "abcdefghijklmnopqrstuvwxyz"
+  );
+  var numbers = window.confirm(
+    "Do you want to include numbers?\n"
+    + "0123456789"
+  );
+  var specialCharacters = window.confirm(
+    "Do you want to include special characters?\n"
+    + "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+  );
+  
+  
+  // Concatenating all possible selections to a big string 
+  if (upperCase === true) {
+    randomCharacters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  }
+  if (lowerCase === true) {
+    randomCharacters += "abcdefghijklmnopqrstuvwxyz";
   }
   if (numbers === true) {
     randomCharacters += "0123456789";
@@ -24,16 +55,13 @@ var selectCharacters = function() {
   if (specialCharacters === true) {
     randomCharacters += "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
   }
-  // retornar chars
+  // Return all possible selections as a single string 
   return randomCharacters;
 }
-// console.log(selectCharacters())
 
-
+// function to build the password based on the length and characters type chose 
 var generatePassword = function (pwdSize, chars) {
   var results = "";
-  // console.log(chars)
-  // console.log(pwdSize)
   for (var i = 0; i < pwdSize; i++) {
       results += chars.charAt(Math.floor(Math.random() * chars.length));
     }
