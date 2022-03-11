@@ -37,6 +37,5 @@ The website presents a simple home page allowing the user to generate a password
 ## Generated Password - Screenshot
 ![Generated Password - Screenshot](assets/screenshots/generated-password.png)
 
-
 ## Contribution
 Powered by Fernando Almeida
