@@ -7,7 +7,11 @@ var numberCharacters = function () {
     + "Password length (8-128)"
   );
   if (number === null) {
-    return;
+    alert(
+      "Canceled by a mistake? No worries, hit the button again.\n" 
+      + "Bye for now!"
+    )
+    throw new Error("User cancelled the prompt");
   }
   if (number < 8 || number > 128) {
     number = parseInt(number);
