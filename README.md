@@ -17,6 +17,8 @@ The website presents a simple home page allowing the user to generate a password
 ![Home Page Screenshot](assets/screenshots/home-page.png)
 
 ## Questions Section - Screenshot
+<img src="assets/screenshots/question1.png"  width="200" height="200" >
+
 ![Question 1 - Screenshot](assets/screenshots/question1.png)
 
 ![Question 1 - Cancelled Screenshot](assets/screenshots/question1-canceled.png)
