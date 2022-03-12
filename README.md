@@ -6,6 +6,7 @@ A website that provides a quick way to generate a random password using Letters,
 ## Built With
 * HTML
 * JS
+* CSS
 
 ## Website
 https://flalmeida3105.github.io/pwd-generator/
