@@ -37,7 +37,7 @@ The website presents a simple home page allowing the user to generate a password
 <img src="assets/screenshots/question4.png" width="550" height="250" >
 
 ### Pop-Up asking whether special characters should be included
-<img src="(assets/screenshots/question5.png" width="550" height="250" >
+<img src="assets/screenshots/question5.png" width="550" height="250" >
 
 ### Pop-Up showing the Password Confirmation
 <img src="assets/screenshots/password-confirmation.png" width="550" height="250" >
