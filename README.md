@@ -14,30 +14,36 @@ https://flalmeida3105.github.io/pwd-generator/
 The website presents a simple home page allowing the user to generate a password based on certain criteria
 
 ## Home page - Screenshot
-![Home Page Screenshot](assets/screenshots/home-page.png)
+<img src="assets/screenshots/home-page.png" width="550" height="250" >
 
 ## Questions Section - Screenshot
-<img src="assets/screenshots/question1.png"  width="400" height="300" >
 
-![Question 1 - Screenshot](assets/screenshots/question1.png)
+### First Pop-up
+<img src="assets/screenshots/question1.png" width="550" height="250" >
 
-![Question 1 - Cancelled Screenshot](assets/screenshots/question1-canceled.png)
+### Pop-Up that notifies the user the action was cancelled
+<img src="assets/screenshots/question1-canceled.png" width="550" height="250" >
 
-![Question 1 - Reminder Screenshot](assets/screenshots/question1-reminder.png)
+### Pop-Up that notifies the user the minimum number of characters
+<img src="assets/screenshots/question1-reminder.png" width="550" height="250" >
 
-![Question 2 - Screenshot](assets/screenshots/question2.png)
+### Pop-Up asking whether upper case letter should be included
+<img src="assets/screenshots/question2.png" width="550" height="250" >
 
-![Question 3 - Screenshot](assets/screenshots/question3.png)
+### Pop-Up asking whether lower case letter should be included
+<img src="assets/screenshots/question3.png" width="550" height="250" >
 
-![Question 4 - Screenshot](assets/screenshots/question4.png)
+### Pop-Up asking whether numbers should be included
+<img src="assets/screenshots/question4.png" width="550" height="250" >
 
-![Question 5 - Screenshot](assets/screenshots/question5.png)
+### Pop-Up asking whether special characters should be included
+<img src="(assets/screenshots/question5.png" width="550" height="250" >
 
-## Password Confirmation Pop-Up- Screenshot
-![Password Confirmation Pop-Up - Screenshot](assets/screenshots/password-confirmation.png)
+### Pop-Up showing the Password Confirmation
+<img src="assets/screenshots/password-confirmation.png" width="550" height="250" >
 
 ## Generated Password - Screenshot
-![Generated Password - Screenshot](assets/screenshots/generated-password.png)
+<img src="assets/screenshots/generated-password.png" width="550" height="250" >
 
 ## Contribution
 Powered by Fernando Almeida
